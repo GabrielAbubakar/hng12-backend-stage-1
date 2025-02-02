@@ -1,5 +1,6 @@
 # HNG Stage Zero Backend Track
-This is my submission for the HNG intership stage 1 task. The project is setup using ExpressJs and only exposes one route.
+This is my submission for the HNG intership stage 1 task. 
+The project is setup using ExpressJs and only exposes one route. The '/api/classify-number' route which receives a query of number that is required for the api to give a valid response.
 
 ## How to Run
 1. First clone the application from the online repository to a local folder using the following command:

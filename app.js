@@ -23,7 +23,6 @@ app.get('/api/classify-number', async (req, res) => {
         // Fetch the numbers info from the Numbers API
         const info = await axios.get(`http://numbersapi.com/${num}/math`)
 
-
         res.status(200).json({
             number: num,
             is_prime: isPrime(num),
@@ -32,10 +31,7 @@ app.get('/api/classify-number', async (req, res) => {
             digit_sum: digitSum(num),  // sum of its digits
             fun_fact: info.data //gotten from the numbers API
         })
-
     } catch (error) {
-        console.log(error);
-
         res.status(500).json({ error });
     }
 })
