@@ -1,5 +1,6 @@
 const express = require('express')
 const axios = require('axios')
+const compression = require('compression');
 const isPrime = require('./utils/isPrime')
 const digitSum = require('./utils/digitSum')
 const isArmstrong = require('./utils/isArmstrong')
@@ -7,6 +8,8 @@ const isPerfect = require('./utils/isPerfect')
 
 const app = express()
 
+// to compress responses
+app.use(compression());
 
 app.get('/api/classify-number', async (req, res) => {
     try {
